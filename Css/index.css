@@ -161,9 +161,10 @@ header .login a:hover {
 .showcase .container .card {
   width: 100%;
   border-radius: 10px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   position: relative;
+  text-align: center;
 }
 
 .showcase .container .card p {
@@ -185,23 +186,28 @@ header .login a:hover {
   padding: 30px;
 }
 
-.showcase .container .card .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.showcase .container .card a {
+  padding: 10px 155px;
   background-color: cadetblue;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.showcase .container .card .button a {
   text-decoration: none;
   color: burlywood;
   font-size: 24px;
   font-weight: 600;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.showcase .container .card a:hover {
+  background-color: burlywood;
+  color: white;
+  text-decoration: none;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.showcase .container .card a:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  opacity: .5;
 }
 /*# sourceMappingURL=index.css.map */

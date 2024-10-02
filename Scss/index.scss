@@ -141,8 +141,9 @@ header {
         .card {
             width: 100%;
             border-radius: 10px;
-            transition: .4s;
+            transition: all .4s;
             position: relative;
+            text-align: center;
 
             p {
                 position: absolute;
@@ -162,19 +163,26 @@ header {
                 padding: 30px;
             }
 
-            .button {
-                display: flex;
-                justify-content: center;
+            
+            a {
+                padding: 10px 155px;
                 background-color: cadetblue;
-                padding: 10px;
-                border-radius: 10px;
-                margin-top: 20px;
+                text-decoration: none;
+                color: burlywood;
+                font-size: 24px;
+                font-weight: 600;
+                transition: all .5s;
 
-                a {
+                &:hover{
+                    background-color: burlywood;
+                    color: white;
                     text-decoration: none;
-                    color: burlywood;
-                    font-size: 24px;
-                    font-weight: 600;
+                    transform: translateY(-2px);
+                }
+
+                &:active{
+                    transform: translateY(-1px);
+                    opacity: .5;
                 }
             }
         }
