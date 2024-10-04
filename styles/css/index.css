@@ -6,10 +6,9 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1990px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 3.3%;
 }
 
 .reklama {
@@ -111,38 +110,38 @@ header .login a:active {
 .showcase {
   display: flex;
   width: 100%;
-  padding: 100px 0;
 }
-.showcase .container {
-  display: flex;
+.showcase .container-showcase {
+  display: grid;
+  grid-template-columns: auto auto auto;
   width: 100%;
-  gap: 50px;
+  padding-top: 100px;
 }
-.showcase .container .card {
+.showcase .container-showcase .card {
   width: 100%;
   border-radius: 10px;
   transition: all 0.4s;
   position: relative;
   text-align: center;
+  z-index: 10;
 }
-.showcase .container .card p {
+.showcase .container-showcase .card p {
   position: absolute;
   bottom: 70px;
-  left: 180px;
+  left: 210px;
   padding: 5px 10px;
   color: cadetblue;
   background-color: burlywood;
   display: inline-block;
   border-radius: 5px;
 }
-.showcase .container .card img {
+.showcase .container-showcase .card img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: calc(100vh - 350px);
-  padding: 30px;
+  width: 400px;
+  height: 400px;
 }
-.showcase .container .card a {
+.showcase .container-showcase .card a {
   padding: 10px 155px;
   background-color: cadetblue;
   text-decoration: none;
@@ -151,13 +150,49 @@ header .login a:active {
   font-weight: 600;
   transition: all 0.5s;
 }
-.showcase .container .card a:hover {
+.showcase .container-showcase .card a:hover {
   background-color: burlywood;
   color: white;
   text-decoration: none;
   transform: translateY(-2px);
 }
-.showcase .container .card a:active {
+.showcase .container-showcase .card a:active {
   transform: translateY(-1px);
   opacity: 0.5;
+}
+
+.container-sidebar {
+  display: none;
+}
+.container-sidebar .sidebar {
+  width: 30%;
+  background-color: burlywood;
+  padding: 20px 40px;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  z-index: 100;
+  transition: all 0.4s;
+}
+
+@media (max-width: 1024px) {
+  #Menu .container-showcase .card img {
+    width: 250px;
+    height: 250px;
+  }
+  #Menu .container-showcase .card a {
+    padding: 5px 70px;
+  }
+  #Menu .container-showcase .card p {
+    bottom: 50px;
+    left: 150px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+  .container-sidebar {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */

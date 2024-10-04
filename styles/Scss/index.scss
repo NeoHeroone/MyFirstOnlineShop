@@ -6,10 +6,10 @@
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1990px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 3.3%;
+    // padding: 0 3.3%;
 }
 
 .reklama {
@@ -134,12 +134,14 @@ header {
 .showcase {
     display: flex;
     width: 100%;
-    padding: 100px 0;
+    // padding: 100px 0;
 
-    .container {
-        display: flex;
+    .container-showcase {
+        display: grid;
+        grid-template-columns: auto auto auto;
         width: 100%;
-        gap: 50px;
+        padding-top: 100px;
+        // gap: 50px;
 
 
         .card {
@@ -148,11 +150,12 @@ header {
             transition: all .4s;
             position: relative;
             text-align: center;
+            z-index: 10;
 
             p {
                 position: absolute;
                 bottom: 70px;
-                left: 180px;
+                left: 210px;
                 padding: 5px 10px;
                 color: cadetblue;
                 background-color: burlywood;
@@ -162,9 +165,12 @@ header {
 
             img {
                 object-fit: cover;
-                width: 100%;
-                height: calc(100vh - 350px);
-                padding: 30px;
+                width: 400px;
+                height: 400px;
+                // padding-top: 100px;
+                // height: calc(100vh - 350px);
+                // padding: 30px;
+                // margin-bottom: -110px;
             }
 
             
@@ -190,5 +196,48 @@ header {
                 }
             }
         }
+    }
+}
+
+.container-sidebar{
+    display: none;
+    .sidebar{
+        width: 30%;
+        background-color: burlywood;
+        padding: 20px 40px;
+        position: fixed;
+        top: 10px;
+        left: 0;
+        z-index: 100;
+        transition: all .4s;
+    }
+}
+
+@media (max-width: 1024px) {
+    #Menu {
+        .container-showcase{
+            .card{
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+                a{
+                    padding: 5px 70px;
+                }
+                p{
+                    bottom: 50px;
+                    left: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        display: none;
+    }
+    .container-sidebar{
+        display: block;
     }
 }
