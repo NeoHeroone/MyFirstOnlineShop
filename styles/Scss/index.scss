@@ -116,12 +116,16 @@ header {
             border: 1px solid whitesmoke;
             border-radius: 10px;
             transition: .4s;
-        }
 
-        a:hover {
-            border: 1px solid burlywood;
-            color: whitesmoke;
-            text-shadow: 0 0 10px whitesmoke;
+            &:hover{
+                border: 1px solid burlywood;
+                color: whitesmoke;
+                text-shadow: 0 0 10px whitesmoke;
+            }
+            
+            &:active{
+                opacity: .5;
+            }
         }
     }
 
